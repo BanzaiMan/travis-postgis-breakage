@@ -1,0 +1,8 @@
+#   Travis-ci.org configuration file for ABRAID-MP
+#   Copyright (c) 2014 University of Oxford
+services:
+  - postgresql
+before_script:
+  - chmod +x *.sh
+script:
+  - ./test.sh
