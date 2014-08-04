@@ -3,7 +3,7 @@
 services:
   - postgresql
 before_script:
-  - dpkg --get-selections | grep -v deinstall | grep -i post
+  - dpkg -l | grep -i post
   - sudo apt-get purge libgeos++-dev
   - chmod +x *.sh
 script:
