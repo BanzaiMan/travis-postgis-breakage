@@ -7,7 +7,7 @@ FILE=`readlink -f raster.tif`
 echo "$FILE"
 STATEMENT="SELECT ST_FromGDALRaster(bytea_import('$FILE'), 4326);"
 echo "$STATEMENT"
-psql -U postgres -d test -c "$STATEMENT"
+psql -U postgres -d test -P pager=off -c "$STATEMENT"
 EXIT=$?
 echo "EXIT CODE: $EXIT"
 exit $EXIT
