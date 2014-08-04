@@ -3,6 +3,7 @@
 services:
   - postgresql
 before_script:
+  - sudo apt-get purge libgeos++-dev
   - chmod +x *.sh
 script:
   - ./test.sh
